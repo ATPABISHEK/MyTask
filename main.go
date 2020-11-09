@@ -67,10 +67,19 @@ func articlePostHandler(w http.ResponseWriter, r *http.Request) {
 		"content":   article["content"],
 		"timestamp": time.Now().String(),
 	})
-	fmt.Fprintf(w,string(postResult)) 
+	fmt.Println(postResult)
+	responseResult, err := json.Marshal(map[string]string{
+		"id":        fmt.Sprint(count),
+		"title":     article["title"],
+		"subtitle":  article["subtitle"],
+		"content":   article["content"],
+		"timestamp": time.Now().String(),
+	})
+	errorHandler(err)
+	fmt.Fprintf(w, string(responseResult)) 
 }
 
-//====================http request handler(end point) methods are here=================
+//====================http request handler(end point) functions are here=================
 
 //it is called when route is "\"
 
