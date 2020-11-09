@@ -18,11 +18,12 @@ This project contains HTTP JSON API for news article
  URL should be ‘/articles/search?q=<search term here>’
  
 # POST request for articles
- This should be post request\
- request should have body data as type JSON\
- each JSON should have following format:\
-    {\
-       "title":\<article title as string\>,\
-       "subtitle":\<article subtitle as string\>,\
-       "content":\<article content as string\>\
-    }
+ 1. This should be post request\
+ 1. request should have body data as type JSON\
+ 1. each JSON should have following format:\
+    1. {\
+    1.  "title":\<article title as string\>,\
+    1.  "subtitle":\<article subtitle as string\>,\
+    1.  "content":\<article content as string\>\
+    1. }\
+ 1. key names should not be changed and also they are case sensitive
