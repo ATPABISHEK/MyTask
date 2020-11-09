@@ -67,7 +67,7 @@ func articlePostHandler(w http.ResponseWriter, r *http.Request) {
 		"content":   article["content"],
 		"timestamp": time.Now().String(),
 	})
-	fmt.Println(postResult)
+	fmt.Fprintf(w,string(postResult)) 
 }
 
 //====================http request handler(end point) methods are here=================
