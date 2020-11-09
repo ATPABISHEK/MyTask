@@ -22,7 +22,7 @@ This project contains HTTP JSON API for news article
  request should have body data as type JSON\
  each JSON should have following format:\
     {
-       "title":<article title as string>
-       "subtitle":<article subtitle as string>
-       "content":<article content as string>
+       "title":\<article title as string\>
+       "subtitle":\<article subtitle as string\>
+       "content":\<article content as string\>
     }
